@@ -174,7 +174,8 @@
     top: 8px;
 }
 
-.hamburger span.hamOpen {
+.hamburger span.hamOpen,
+.nav:not(.scrolled) .hamburger span.hamOpen {
     background: transparent;
 }
 
