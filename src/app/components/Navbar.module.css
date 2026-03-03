@@ -231,6 +231,16 @@
     color: var(--harvest-gold);
 }
 
+.mobileCtaWrapper {
+    margin-top: 2.5rem;
+}
+
+.mobileCta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+}
+
 /* Responsive */
 @media (max-width: 1150px) {
     .links {
@@ -244,10 +254,6 @@
 }
 
 @media (max-width: 900px) {
-    .inner {
-        flex-wrap: wrap;
-    }
-
     .links {
         display: none;
     }
@@ -259,6 +265,16 @@
     .hamburger {
         display: block;
         margin-left: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cta {
+        display: none;
+    }
+
+    .hamburger {
+        margin-left: auto;
     }
 }
 
@@ -274,14 +290,5 @@
     .leafIcon {
         width: 24px;
         height: 24px;
-    }
-
-    .cta {
-        padding: 0.5rem 1rem;
-        font-size: 0.68rem;
-    }
-
-    .hamburger {
-        margin-left: 0.5rem;
     }
 }

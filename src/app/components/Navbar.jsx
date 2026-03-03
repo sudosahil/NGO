@@ -133,6 +133,15 @@ export default function Navbar() {
                             </Link>
                         </li>
                     ))}
+                    <li className={styles.mobileCtaWrapper}>
+                        <Link
+                            href="/get-involved"
+                            className={`btn btn-moss ${styles.mobileCta}`}
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            Volunteer Now
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </>
