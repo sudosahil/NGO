@@ -1,0 +1,654 @@
+/* ========== DASHBOARD LAYOUT ========== */
+.dashboard {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+    background: var(--cream);
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    background: var(--soil-dark);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebarLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.sidebarLink {
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0.7rem 0.8rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sidebarLink:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebarActive {
+    color: var(--harvest-gold) !important;
+    background: rgba(200, 168, 75, 0.1) !important;
+}
+
+.logoutBtn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.6rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.logoutBtn:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ========== MAIN ========== */
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid var(--parchment);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topBar h1 {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--soil-dark);
+}
+
+.adminBadge {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--moss-deep);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+}
+
+.content {
+    padding: 2rem;
+    flex: 1;
+}
+
+/* ========== STATS GRID ========== */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.statCard {
+    background: #fff;
+    border-radius: 2px;
+    padding: 1.2rem 1.5rem;
+    border-top: 3px solid var(--moss-mid);
+    box-shadow: 0 2px 12px rgba(44, 26, 14, 0.06);
+}
+
+.statLabel {
+    display: block;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--soil-light);
+    margin-bottom: 0.3rem;
+}
+
+.statValue {
+    display: block;
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--soil-dark);
+    margin-bottom: 0.2rem;
+}
+
+.statSub {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--soil-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ========== SECTIONS ========== */
+.overviewSection {
+    background: #fff;
+    border-radius: 2px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(44, 26, 14, 0.06);
+    margin-bottom: 2rem;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.linkBtn {
+    background: none;
+    border: none;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--moss-mid);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.linkBtn:hover {
+    color: var(--moss-deep);
+}
+
+/* ========== QUICK ACTIONS ========== */
+.quickActions h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.actionsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.actionCard {
+    background: #fff;
+    border: 1px solid var(--parchment);
+    border-radius: 2px;
+    padding: 1.5rem;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--soil-dark);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.actionCard:hover {
+    border-color: var(--moss-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(44, 26, 14, 0.08);
+}
+
+/* ========== TABLE ========== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(44, 26, 14, 0.06);
+    font-family: var(--font-lora), 'Lora', serif;
+    font-size: 0.88rem;
+}
+
+.table th {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.68rem;
+    color: var(--soil-light);
+    background: var(--parchment);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--parchment);
+    color: var(--soil-mid);
+    vertical-align: top;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background: rgba(212, 232, 208, 0.2);
+}
+
+.notesCell {
+    max-width: 180px;
+    font-size: 0.82rem;
+    color: var(--soil-light);
+}
+
+.empty {
+    text-align: center;
+    padding: 2rem !important;
+    color: var(--soil-light) !important;
+}
+
+/* ========== BADGES ========== */
+.badge {
+    display: inline-block;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.badgeNew {
+    background: rgba(74, 124, 74, 0.12);
+    color: var(--moss-deep);
+}
+
+.badgeContacted {
+    background: rgba(200, 168, 75, 0.15);
+    color: var(--soil-mid);
+}
+
+.badgeFollowUp {
+    background: rgba(160, 113, 79, 0.15);
+    color: var(--soil-mid);
+}
+
+.badgeConverted {
+    background: rgba(74, 124, 74, 0.2);
+    color: var(--moss-deep);
+}
+
+.badgeLost {
+    background: rgba(180, 40, 40, 0.1);
+    color: #8b2020;
+}
+
+.incomeAmt {
+    color: var(--moss-deep);
+    font-weight: 600;
+}
+
+.expenseAmt {
+    color: #8b2020;
+    font-weight: 600;
+}
+
+/* ========== TOOLBAR ========== */
+.tabToolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.filterGroup {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: #fff;
+    border: 1px solid var(--parchment);
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--soil-mid);
+    transition: all 0.15s;
+}
+
+.filterBtn:hover {
+    border-color: var(--moss-mid);
+}
+
+.filterActive {
+    background: var(--moss-deep);
+    color: #fff;
+    border-color: var(--moss-deep);
+}
+
+.addBtn {
+    font-size: 0.72rem !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* ========== ACTIONS ========== */
+.actions {
+    white-space: nowrap;
+}
+
+.editBtn,
+.deleteBtn {
+    background: none;
+    border: none;
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 2px;
+    transition: all 0.15s;
+}
+
+.editBtn {
+    color: var(--moss-mid);
+}
+
+.editBtn:hover {
+    background: rgba(74, 124, 74, 0.1);
+}
+
+.deleteBtn {
+    color: #8b2020;
+}
+
+.deleteBtn:hover {
+    background: rgba(180, 40, 40, 0.1);
+}
+
+/* ========== BUDGET SUMMARY ========== */
+.budgetSummary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.budgetBox {
+    background: #fff;
+    border-radius: 2px;
+    padding: 1.2rem 1.5rem;
+    border-top: 3px solid var(--moss-mid);
+    box-shadow: 0 2px 12px rgba(44, 26, 14, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.budgetBox span {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil-light);
+}
+
+.budgetBox strong {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--soil-dark);
+}
+
+/* ========== REACH GRID ========== */
+.reachGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.reachCard {
+    background: #fff;
+    border-radius: 2px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 12px rgba(44, 26, 14, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: transform 0.2s ease;
+}
+
+.reachCard:hover {
+    transform: translateY(-2px);
+}
+
+.reachTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reachMetric {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--soil-light);
+}
+
+.reachTrend {
+    font-size: 1rem;
+}
+
+.reachValue {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--soil-dark);
+}
+
+.reachPeriod {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--soil-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.reachActions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+/* ========== CRUD FORM ========== */
+.formOverlay {
+    background: #fff;
+    border: 1px solid var(--parchment);
+    border-radius: 2px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(44, 26, 14, 0.1);
+}
+
+.crudForm h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem 1.2rem;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.formField label {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--soil-mid);
+}
+
+.formField input,
+.formField select,
+.formField textarea {
+    font-family: var(--font-lora), 'Lora', serif;
+    font-size: 0.88rem;
+    background: var(--cream);
+    border: 1px solid var(--soil-light);
+    border-radius: 2px;
+    padding: 0.6rem 0.8rem;
+    color: var(--soil-dark);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formField input:focus,
+.formField select:focus,
+.formField textarea:focus {
+    border-color: var(--moss-mid);
+    box-shadow: 0 0 0 3px rgba(74, 124, 74, 0.12);
+}
+
+.formField textarea {
+    resize: vertical;
+}
+
+.formActions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.cancelBtn {
+    background: none;
+    border: 1px solid var(--soil-light);
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--soil-mid);
+    transition: all 0.15s;
+}
+
+.cancelBtn:hover {
+    border-color: var(--soil-dark);
+    color: var(--soil-dark);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .sidebarNav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reachGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .budgetSummary {
+        grid-template-columns: 1fr;
+    }
+
+    .actionsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .statsGrid,
+    .reachGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .table {
+        font-size: 0.78rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+}

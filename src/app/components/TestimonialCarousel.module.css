@@ -1,0 +1,86 @@
+.carousel {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quoteDecor {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 10rem;
+    line-height: 1;
+    color: var(--harvest-gold);
+    opacity: 0.15;
+    pointer-events: none;
+    user-select: none;
+}
+
+.slide {
+    transition: opacity 0.3s ease;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.quote {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+}
+
+.author {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--harvest-gold);
+    letter-spacing: 0.06em;
+}
+
+.role {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.dot:hover {
+    border-color: var(--harvest-gold);
+}
+
+.dotActive {
+    background: var(--harvest-gold);
+    border-color: var(--harvest-gold);
+}

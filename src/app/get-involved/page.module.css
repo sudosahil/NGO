@@ -1,0 +1,106 @@
+/* ========== SPLIT PANEL ========== */
+.splitSection {
+    width: 100%;
+}
+
+.splitGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.volunteerPanel {
+    background: var(--moss-deep);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 4rem 3rem;
+}
+
+.volunteerPanel h2 {
+    margin-bottom: 1.2rem;
+}
+
+.volunteerPanel p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.panelLabel {
+    color: var(--harvest-gold);
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.panelLabelGreen {
+    color: var(--moss-mid);
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.infoBadge {
+    border: 2px solid var(--harvest-gold);
+    border-radius: 2px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.infoBadge p {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.82rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.04em;
+}
+
+.smallNote {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+
+.groupPanel {
+    background: var(--parchment);
+    color: var(--soil-dark);
+    padding: 4rem 3rem;
+}
+
+.groupPanel h2 {
+    margin-bottom: 1.2rem;
+}
+
+.groupPanel p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.leafList {
+    list-style: none;
+    margin-bottom: 1.2rem;
+}
+
+.leafList li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--soil-mid);
+}
+
+.smallNoteDark {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--soil-light);
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .splitGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .volunteerPanel,
+    .groupPanel {
+        padding: 3rem 1.5rem;
+    }
+}

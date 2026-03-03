@@ -1,0 +1,250 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.35s ease;
+    background: transparent;
+}
+
+.nav.scrolled {
+    padding: 0.55rem 0;
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 16px rgba(44, 26, 14, 0.08);
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--moss-deep);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: var(--moss-mid);
+}
+
+.nav:not(.scrolled) .logo {
+    color: #fff;
+}
+
+.nav:not(.scrolled) .logo:hover {
+    color: var(--harvest-light);
+}
+
+.leafIcon {
+    flex-shrink: 0;
+}
+
+/* Links */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    list-style: none;
+    margin-left: auto;
+}
+
+.links a {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+    color: var(--soil-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.nav:not(.scrolled) .links a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.nav:not(.scrolled) .links a:hover,
+.nav:not(.scrolled) .links a.active {
+    color: #fff;
+}
+
+.links a:hover {
+    color: var(--moss-mid);
+}
+
+.links a.active {
+    color: var(--moss-mid);
+}
+
+.links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--moss-mid);
+    border-radius: 1px;
+}
+
+/* CTA */
+.cta {
+    margin-left: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    padding: 0.6rem 1.4rem;
+}
+
+.nav:not(.scrolled) .cta {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.nav:not(.scrolled) .cta:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin-left: auto;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--soil-dark);
+    position: absolute;
+    left: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav:not(.scrolled) .hamburger span,
+.nav:not(.scrolled) .hamburger span::before,
+.nav:not(.scrolled) .hamburger span::after {
+    background: #fff;
+}
+
+.hamburger span {
+    top: 15px;
+}
+
+.hamburger span::before {
+    content: '';
+    top: -8px;
+}
+
+.hamburger span::after {
+    content: '';
+    top: 8px;
+}
+
+.hamburger span.hamOpen {
+    background: transparent;
+}
+
+.hamburger span.hamOpen::before {
+    top: 0;
+    transform: rotate(45deg);
+    background: #fff;
+}
+
+.hamburger span.hamOpen::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background: #fff;
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--moss-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.mobileOverlay.mobileShow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobileOverlay ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobileOverlay li {
+    margin-bottom: 1.2rem;
+}
+
+.mobileOverlay a {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.mobileOverlay a:hover,
+.mobileOverlay a.mobileActive {
+    color: var(--harvest-gold);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .links {
+        gap: 1rem;
+    }
+
+    .links a {
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .links,
+    .cta {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
