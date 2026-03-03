@@ -270,7 +270,7 @@
 
 @media (max-width: 600px) {
     .cta {
-        display: none;
+        display: none !important;
     }
 
     .hamburger {
