@@ -245,12 +245,27 @@
 
 @media (max-width: 900px) {
 
-    .links,
-    .cta {
+    .links {
         display: none;
+    }
+
+    .cta {
+        margin-left: auto;
     }
 
     .hamburger {
         display: block;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.68rem;
+    }
+
+    .inner {
+        gap: 0.8rem;
     }
 }
