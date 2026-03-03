@@ -65,17 +65,6 @@
     margin-left: auto;
 }
 
-.links a {
-    font-family: var(--font-dm-mono), 'DM Mono', monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.72rem;
-    color: var(--soil-dark);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    white-space: nowrap;
-    position: relative;
-}
 
 .nav:not(.scrolled) .links a {
     color: rgba(255, 255, 255, 0.85);
@@ -84,10 +73,27 @@
 .nav:not(.scrolled) .links a:hover,
 .nav:not(.scrolled) .links a.active {
     color: #fff;
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .links a:hover {
     color: var(--moss-mid);
+    background: rgba(74, 124, 74, 0.1);
+    border-radius: 2px;
+}
+
+.links a {
+    font-family: var(--font-dm-mono), 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+    color: var(--soil-dark);
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+    padding: 0.35rem 0.55rem;
+    border-radius: 2px;
 }
 
 .links a.active {

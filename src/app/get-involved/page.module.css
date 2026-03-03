@@ -104,3 +104,19 @@
         padding: 3rem 1.5rem;
     }
 }
+
+@media (max-width: 600px) {
+
+    .volunteerPanel,
+    .groupPanel {
+        padding: 2rem 1rem;
+    }
+
+    .infoBadge {
+        padding: 0.75rem 1rem;
+    }
+
+    .infoBadge p {
+        font-size: 0.72rem;
+    }
+}

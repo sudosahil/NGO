@@ -101,3 +101,18 @@
     color: var(--soil-mid);
     font-size: 0.95rem;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .serviceCard {
+        padding: 1.5rem 1rem;
+    }
+
+    .workshopBlock {
+        padding: 1rem;
+    }
+
+    .serviceCard h3 {
+        font-size: 1.2rem;
+    }
+}
