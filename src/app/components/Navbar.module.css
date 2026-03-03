@@ -62,7 +62,6 @@
     align-items: center;
     gap: 1.4rem;
     list-style: none;
-    margin-left: auto;
 }
 
 
@@ -113,11 +112,11 @@
 
 /* CTA */
 .cta {
-    margin-left: 1rem;
     white-space: nowrap;
     flex-shrink: 0;
     font-size: 0.75rem;
     padding: 0.6rem 1.4rem;
+    margin-left: auto;
 }
 
 .nav:not(.scrolled) .cta {
@@ -244,6 +243,9 @@
 }
 
 @media (max-width: 900px) {
+    .inner {
+        flex-wrap: wrap;
+    }
 
     .links {
         display: none;
@@ -260,12 +262,25 @@
 }
 
 @media (max-width: 480px) {
+    .inner {
+        gap: 0.6rem;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .leafIcon {
+        width: 24px;
+        height: 24px;
+    }
+
     .cta {
         padding: 0.5rem 1rem;
         font-size: 0.68rem;
     }
 
-    .inner {
-        gap: 0.8rem;
+    .hamburger {
+        margin-left: 0.5rem;
     }
 }
