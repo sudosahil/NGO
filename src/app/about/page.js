@@ -83,73 +83,90 @@ export default function AboutPage() {
                         <h2>Our Community</h2>
                     </ScrollReveal>
 
+                    {/* Founder Section — Photo + Bio */}
+                    <ScrollReveal>
+                        <div className={styles.founderSection}>
+                            <div className={styles.founderPhotoCol}>
+                                <div className={styles.founderPhotoWrapper}>
+                                    <img
+                                        src="/images/manasvini-tyagi.jpg"
+                                        alt="Manasvini Tyagi — Founder, Earthen Routes"
+                                        className={styles.founderPhoto}
+                                    />
+                                </div>
+                                <div className={styles.founderCaption}>
+                                    <span className={styles.founderCaptionName}>Manasvini Tyagi</span>
+                                    <span className={styles.founderCaptionTitle}>Founder &amp; Farm Lead</span>
+                                </div>
+                            </div>
+
+                            <div className={styles.founderBioCol}>
+                                <p>
+                                    Manasvini Tyagi, the founder of Earthen Routes, is dedicated to bringing
+                                    the benefits of natural farming to cities. With a degree in Textile Designing
+                                    and a certified Permaculture practitioner, she is driven by a passion to raise
+                                    awareness about the benefits of growing your own food.
+                                </p>
+                                <p>
+                                    Manasvini is insightful, approachable and a wonderful person to connect with.
+                                    She is a multi-faceted individual – an artist, urban farmer, animal lover,
+                                    nature photographer, and more.
+                                </p>
+                                <p>
+                                    Having started as a volunteer in 2012, she has worked hard to build Earthen
+                                    Routes into what it is today.
+                                </p>
+                                <p className={styles.founderQuote}>
+                                    &ldquo;The journey has just begun!&rdquo;
+                                </p>
+                            </div>
+                        </div>
+                    </ScrollReveal>
+
+                    {/* Dogs + Volunteers + Staff Cards */}
                     <div className={styles.communityGrid}>
-                        {/* Left Column */}
-                        <div className={styles.communityLeft}>
-                            <ScrollReveal>
-                                <div className={styles.founderCard}>
-                                    <h3 style={{ color: '#fff' }}>Manasvini Tyagi</h3>
-                                    <span className={styles.founderBadge}>Founder &amp; Farm Lead</span>
-                                    <p>
-                                        Manasvini Tyagi, the founder of Earthen Routes, is dedicated to bringing the benefits of natural
-                                        farming to cities. With a degree in Textile Designing and a certified Permaculture practitioner,
-                                        she is driven by a passion to raise awareness about the benefits of growing your own food.
-                                        Manasvini is insightful, approachable and a wonderful person to connect with. She is a
-                                        multi-faceted individual – an artist, urban farmer, animal lover, nature photographer, and more.
-                                        Having started as a volunteer in 2012, she has worked hard to build Earthen Routes into what it
-                                        is today. In her words: &ldquo;the journey has just begun!&rdquo;
-                                    </p>
+                        <ScrollReveal>
+                            <div className={styles.dogsCard}>
+                                <h3>🐾 Our Four-Legged Happiness Squad!</h3>
+                                <p>
+                                    Earthen Routes is not only home to the biodiversity around it – we also have a four-legged gang
+                                    who rules this place! Meet Kaluram, Jamun, Barfi and Gauri… the most playful set of creatures
+                                    at the farm! They say love comes in all forms… ours comes packaged with wagging-tails, belly
+                                    rubs and a little bit of mischief!
+                                </p>
+                                <div className={styles.dogTags}>
+                                    <span className={styles.dogTag}>Kaluram</span>
+                                    <span className={styles.dogTag}>Jamun</span>
+                                    <span className={styles.dogTag}>Barfi</span>
+                                    <span className={styles.dogTag}>Gauri</span>
                                 </div>
-                            </ScrollReveal>
+                            </div>
+                        </ScrollReveal>
 
-                            <ScrollReveal delay={150}>
-                                <div className={styles.dogsCard}>
-                                    <h3>🐾 Our Four-Legged Happiness Squad!</h3>
-                                    <p>
-                                        Earthen Routes is not only home to the biodiversity around it – we also have a four-legged gang
-                                        who rules this place! Meet Kaluram, Jamun, Barfi and Gauri… the most playful set of creatures
-                                        at the farm! They say love comes in all forms… ours comes packaged with wagging-tails, belly
-                                        rubs and a little bit of mischief!
-                                    </p>
-                                    <div className={styles.dogTags}>
-                                        <span className={styles.dogTag}>Kaluram</span>
-                                        <span className={styles.dogTag}>Jamun</span>
-                                        <span className={styles.dogTag}>Barfi</span>
-                                        <span className={styles.dogTag}>Gauri</span>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-                        </div>
+                        <ScrollReveal delay={100}>
+                            <div className="card">
+                                <h3>Volunteers</h3>
+                                <p>
+                                    As a community farm, we involve people from all walks of life to come and volunteer with us.
+                                    Be it sowing seeds, watering plants, making sapling for the nursery, or even non-farming
+                                    activities such as organising fund-raising events and volunteering for workshops, our community
+                                    is what keeps this place going. From students and teachers, to artists and working-professionals,
+                                    we have built a wonderful community of volunteers, each of whom brings something new to the table.
+                                </p>
+                            </div>
+                        </ScrollReveal>
 
-                        {/* Right Column */}
-                        <div className={styles.communityRight}>
-                            <ScrollReveal>
-                                <div className="card">
-                                    <h3>Volunteers</h3>
-                                    <p>
-                                        As a community farm, we involve people from all walks of life to come and volunteer with us.
-                                        Be it sowing seeds, watering plants, making sapling for the nursery, or even non-farming
-                                        activities such as organising fund-raising events and volunteering for workshops, our community
-                                        is what keeps this place going. From students and teachers, to artists and working-professionals,
-                                        we have built a wonderful community of volunteers, each of whom brings something new to the table.
-                                        Not only have they found this place therapeutic, they have also imbibed the learnings of organic
-                                        farming, community service and environment conservation.
-                                    </p>
-                                </div>
-                            </ScrollReveal>
-
-                            <ScrollReveal delay={150}>
-                                <div className="card">
-                                    <h3>Staff &amp; Management</h3>
-                                    <p>
-                                        The land is planned and managed by Ms. Manasvini Tyagi, along with our farm hand – Munir, who
-                                        has been the backbone of our project for the past six years. He is an avid learner, and we could
-                                        not have come this far without his support, dedication and determination. We recruit other
-                                        variable farm hands depending on the availability of resources.
-                                    </p>
-                                </div>
-                            </ScrollReveal>
-                        </div>
+                        <ScrollReveal delay={200}>
+                            <div className="card">
+                                <h3>Staff &amp; Management</h3>
+                                <p>
+                                    The land is planned and managed by Ms. Manasvini Tyagi, along with our farm hand – Munir, who
+                                    has been the backbone of our project for the past six years. He is an avid learner, and we could
+                                    not have come this far without his support, dedication and determination. We recruit other
+                                    variable farm hands depending on the availability of resources.
+                                </p>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>

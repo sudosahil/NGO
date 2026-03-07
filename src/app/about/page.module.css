@@ -1,44 +1,85 @@
-/* ========== COMMUNITY ========== */
-.communityGrid {
+/* ========== FOUNDER SECTION — Mobile First ========== */
+
+/* Base: mobile (375px+) — single column, photo on top */
+.founderSection {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: start;
+    max-width: 64rem;
+    margin: 0 auto 3rem;
 }
 
-.communityLeft,
-.communityRight {
+.founderPhotoCol {
+    width: 100%;
+}
+
+.founderPhotoWrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.founderPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    max-width: 100%;
+}
+
+.founderCaption {
+    background: var(--moss-deep);
+    padding: 0.8rem 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.15rem;
+    border-radius: 0 0 2px 2px;
 }
 
-/* Founder Card */
-.founderCard {
-    background: var(--moss-deep);
-    color: rgba(255, 255, 255, 0.9);
-    border-radius: 2px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 24px rgba(44, 26, 14, 0.10);
+.founderCaptionName {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
-.founderCard h3 {
-    margin-bottom: 0.5rem;
-}
-
-.founderBadge {
-    display: inline-block;
+.founderCaptionTitle {
     font-family: var(--font-dm-mono), 'DM Mono', monospace;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--harvest-gold);
-    margin-bottom: 1.2rem;
 }
 
-.founderCard p {
+.founderBioCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.founderBioCol p {
+    font-family: var(--font-lora), 'Lora', serif;
+    color: var(--soil-mid);
+    font-size: 1rem;
     line-height: 1.8;
-    font-size: 0.95rem;
+}
+
+.founderQuote {
+    font-family: var(--font-playfair), 'Playfair Display', serif !important;
+    font-style: italic;
+    color: var(--moss-deep) !important;
+    font-size: 1.15rem !important;
+    margin-top: 0.5rem;
+}
+
+/* ========== COMMUNITY GRID — Mobile First ========== */
+.communityGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
 }
 
 /* Dogs Card */
@@ -46,7 +87,7 @@
     background: var(--harvest-gold);
     color: var(--soil-dark);
     border-radius: 2px;
-    padding: 2.5rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 24px rgba(44, 26, 14, 0.10);
 }
 
@@ -88,7 +129,7 @@
 
 .timelineLine {
     position: absolute;
-    left: 50%;
+    left: 1rem;
     top: 0;
     bottom: 0;
     width: 3px;
@@ -101,27 +142,27 @@
     position: relative;
     display: flex;
     margin-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 0;
+    text-align: left;
+    justify-content: flex-start;
 }
 
 .milestone:last-child {
     margin-bottom: 0;
 }
 
-.milestoneLeft {
-    justify-content: flex-start;
-    padding-right: calc(50% + 2rem);
-    text-align: right;
-}
-
+.milestoneLeft,
 .milestoneRight {
-    justify-content: flex-end;
-    padding-left: calc(50% + 2rem);
+    padding-left: 3rem;
+    padding-right: 0;
     text-align: left;
+    justify-content: flex-start;
 }
 
 .milestoneDot {
     position: absolute;
-    left: 50%;
+    left: 1rem;
     top: 0.5rem;
     width: 16px;
     height: 16px;
@@ -148,27 +189,52 @@
     font-size: 0.95rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ========== TABLET (768px+) ========== */
+@media (min-width: 768px) {
+    .founderSection {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
     .communityGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dogsCard {
+        padding: 2.5rem;
     }
 }
 
-@media (max-width: 600px) {
-    .timelineLine {
-        left: 1rem;
+/* ========== DESKTOP (1024px+) ========== */
+@media (min-width: 1024px) {
+    .founderSection {
+        gap: 4rem;
     }
 
-    .milestoneLeft,
+    .communityGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Timeline: center layout on desktop */
+    .timelineLine {
+        left: 50%;
+    }
+
+    .milestoneLeft {
+        justify-content: flex-start;
+        padding-right: calc(50% + 2rem);
+        padding-left: 0;
+        text-align: right;
+    }
+
     .milestoneRight {
-        padding-left: 3rem;
+        justify-content: flex-end;
+        padding-left: calc(50% + 2rem);
         padding-right: 0;
         text-align: left;
-        justify-content: flex-start;
     }
 
     .milestoneDot {
-        left: 1rem;
+        left: 50%;
     }
 }
