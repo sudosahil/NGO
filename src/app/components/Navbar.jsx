@@ -1,57 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
-/**
- * Leaf SVG icon for the logo
- */
-function LeafIcon() {
-    return (
-        <svg
-            className={styles.leafIcon}
-            width="28"
-            height="28"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M6 26C6 26 8 18 16 14C24 10 28 4 28 4C28 4 26 12 18 18C14 20.5 10 24 6 26Z"
-                fill="var(--moss-deep)"
-                stroke="var(--moss-mid)"
-                strokeWidth="1.2"
-            />
-            <path
-                d="M6 26C10 20 14 17 18 14"
-                stroke="var(--moss-mid)"
-                strokeWidth="1.2"
-                fill="none"
-                strokeLinecap="round"
-            />
-            <path
-                d="M14 18C12 20 10 22 8 24"
-                stroke="var(--moss-light)"
-                strokeWidth="0.8"
-                fill="none"
-                strokeLinecap="round"
-            />
-            <path
-                d="M20 12C18 15 16 17 14 19"
-                stroke="var(--moss-light)"
-                strokeWidth="0.8"
-                fill="none"
-                strokeLinecap="round"
-            />
-        </svg>
-    );
-}
+
 
 const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
+    { label: 'Our Team', href: '/team' },
     { label: 'What We Do', href: '/what-we-do' },
     { label: 'Get Involved', href: '/get-involved' },
     { label: 'Support Us', href: '/support-us' },
@@ -88,8 +48,14 @@ export default function Navbar() {
             <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
                 <div className={styles.inner}>
                     <Link href="/" className={styles.logo}>
-                        <LeafIcon />
-                        <span>Earthen Routes</span>
+                        <Image
+                            src="/images/logo.png"
+                            alt="Earthen Routes Logo"
+                            width={140}
+                            height={140}
+                            className={styles.logoImage}
+                            priority
+                        />
                     </Link>
 
                     <ul className={styles.links}>

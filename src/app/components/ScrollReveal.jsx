@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 
 /**
  * ScrollReveal — wraps children in a .reveal container that animates on viewport entry.
- * Uses IntersectionObserver with threshold 0.12.
+ * Animations RESET when scrolling back up (element leaves viewport).
  */
 export default function ScrollReveal({ children, className = '', delay = 0 }) {
     const ref = useRef(null);
@@ -19,7 +19,9 @@ export default function ScrollReveal({ children, className = '', delay = 0 }) {
                     setTimeout(() => {
                         el.classList.add('visible');
                     }, delay);
-                    observer.unobserve(el);
+                } else {
+                    // Reset when element leaves viewport
+                    el.classList.remove('visible');
                 }
             },
             { threshold: 0.12 }

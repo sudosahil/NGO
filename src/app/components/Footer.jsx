@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const navLinks = [
@@ -19,10 +20,13 @@ export default function Footer() {
                     {/* Left — Logo & Tagline */}
                     <div className={styles.col}>
                         <Link href="/" className={styles.logo}>
-                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                                <path d="M6 26C6 26 8 18 16 14C24 10 28 4 28 4C28 4 26 12 18 18C14 20.5 10 24 6 26Z" fill="#7FB069" stroke="#4A7C4A" strokeWidth="1.2" />
-                                <path d="M6 26C10 20 14 17 18 14" stroke="#4A7C4A" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-                            </svg>
+                            <Image
+                                src="/images/logo.png"
+                                alt="Earthen Routes Logo"
+                                width={56}
+                                height={56}
+                                className={styles.logoImage}
+                            />
                             <span>Earthen Routes</span>
                         </Link>
                         <p className={styles.tagline}>

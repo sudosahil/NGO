@@ -119,9 +119,7 @@ export default function DashboardPage() {
             {/* Sidebar */}
             <aside className={styles.sidebar}>
                 <div className={styles.sidebarLogo}>
-                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                        <path d="M6 26C6 26 8 18 16 14C24 10 28 4 28 4C28 4 26 12 18 18C14 20.5 10 24 6 26Z" fill="#7FB069" stroke="#4A7C4A" strokeWidth="1.2" />
-                    </svg>
+                    <img src="/images/logo.png" alt="Earthen Routes Logo" width="32" height="32" style={{ objectFit: 'contain' }} />
                     <span>Admin Panel</span>
                 </div>
 
